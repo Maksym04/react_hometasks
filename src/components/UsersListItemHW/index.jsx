@@ -7,13 +7,13 @@ function UsersListItemHW(props) {
   const mapUser = (user, index) => {
     const onClickHandler = () => {
       const newUsers = [...users];
-      newUsers[index].isSelected = !newUsers[index].isSelected;
+      newUsers[index].isLiked = !newUsers[index].isLiked;
       setUsers(newUsers);
     };
 
-    const deleteUsers = index => {
+    const deleteUsers = () => {
       const newUsers = [...users];
-      newUsers.splice(index, 1);
+      newUsers.splice([index], 1);
       setUsers(newUsers);
     };
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SelectedUsersList from '../SelectedUsersList';
+import LikedUsersList from '../LikedUsersList';
 import UsersListItemHW from '../UsersListItemHW';
 
 const dbUsers = [
@@ -74,7 +74,7 @@ class UsersListHW extends Component {
     super(props);
 
     this.state = {
-      users: dbUsers.map(user => ({ ...user, isSelected: false })),
+      users: dbUsers.map(user => ({ ...user, isLiked: false })),
     };
   }
 
@@ -88,7 +88,7 @@ class UsersListHW extends Component {
     return (
       <>
         <UsersListItemHW users={users} setUsers={this.setUsers} />
-        <SelectedUsersList users={users} />
+        <LikedUsersList users={users} />
       </>
     );
   }

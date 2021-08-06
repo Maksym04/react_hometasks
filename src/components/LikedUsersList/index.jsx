@@ -1,8 +1,8 @@
 import React from 'react';
 
-function SelectedUsersList(props) {
+function LikedUsersList(props) {
   const { users } = props;
-  const selectedUsers = users.filter(user => user.isSelected);
+  const likedUsers = users.filter(user => user.isLiked);
 
   const mapUsers = ({ id, firstName, lastName }) => (
     <li key={id}>
@@ -10,7 +10,7 @@ function SelectedUsersList(props) {
     </li>
   );
 
-  return <ol>{selectedUsers.map(mapUsers)}</ol>;
+  return <ol>{likedUsers.map(mapUsers)}</ol>;
 }
 
-export default SelectedUsersList;
+export default LikedUsersList;

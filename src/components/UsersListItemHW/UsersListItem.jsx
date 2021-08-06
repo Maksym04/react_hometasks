@@ -3,7 +3,7 @@ import styles from './UsersListItemHW.module.css';
 
 function UsersListItem(props) {
   const {
-    user: { id, firstName, lastName, age, imgSrc, isSelected },
+    user: { firstName, lastName, age, imgSrc, isLiked },
     onClickHandler,
     deleteUsers,
   } = props;
@@ -24,7 +24,7 @@ function UsersListItem(props) {
         </div>
         <div className={styles.buttonBlock}>
           <button
-            style={isSelected ? buttonStyle : null}
+            style={isLiked ? buttonStyle : null}
             className={styles.likeButton}
             onClick={onClickHandler}
           >
